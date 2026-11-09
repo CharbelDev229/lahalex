@@ -243,6 +243,7 @@ export default function UniverselPage() {
                   "Aide-mémoire rapide, support de révision ou d'enseignement dans tous les domaines professionnels.",
                 avantage:
                   "Clarté, gain de temps, accès immédiat à l'essentiel dans votre domaine d'expertise.",
+                image: "autre-outil.png",
                 reverse: false,
               },
               {
@@ -253,6 +254,7 @@ export default function UniverselPage() {
                   "Renforce les compétences méthodologiques, structure le raisonnement professionnel dans votre discipline.",
                 avantage:
                   "Clarifie les attentes, propose des schémas types et des conseils concrets adaptés à chaque exercice et domaine.",
+                image: "autre-outil-2.png",
                 reverse: true,
               },
               {
@@ -263,6 +265,7 @@ export default function UniverselPage() {
                   "Clarifie les termes techniques et spécialisés souvent complexes dans tous les domaines.",
                 avantage:
                   "Compréhension rapide, fiabilité terminologique, utile en rédaction et en argumentation professionnelle.",
+                image: "autre-outil-3.png",
                 reverse: false,
               },
               {
@@ -273,6 +276,7 @@ export default function UniverselPage() {
                   "Approfondissement des enjeux professionnels, construction d'argumentaires solides et pluridisciplinaires.",
                 avantage:
                   "Veille intellectuelle et stratégique, utile à la recherche, l'enseignement ou la pratique dans tous les domaines.",
+                image: "autre-outil-4.png",
                 reverse: true,
               },
               {
@@ -283,7 +287,19 @@ export default function UniverselPage() {
                   "Suivez tous les événements scientifiques et professionnels importants sans faille.",
                 avantage:
                   "Rattrapez facilement ceux que vous avez manqués grâce aux comptes rendus détaillés.",
+                image: "rencontres-juridiques.png",
                 reverse: false,
+              },
+              {
+                number: "6",
+                title: "Schémas 3D du corps humain",
+                desc: "Un explorateur anatomique interactif pour découvrir le corps humain en trois dimensions : systèmes osseux, musculaire, nerveux, cardiovasculaire, respiratoire, digestif, urinaire, reproducteur et tégumentaire. Affichez un corps d'homme ou de femme, ou comparez-les côte à côte. Superposez plusieurs systèmes, réglez leur opacité, puis cliquez sur une structure pour ouvrir sa fiche : localisation, description, et outils pour la centrer, l'isoler ou la masquer. Des QCM intégrés vous invitent à reconnaître les structures directement sur le modèle.",
+                utilite:
+                  "Visualise la position, les rapports et le rôle des organes pour réviser l'anatomie, préparer un cours ou appuyer une explication clinique.",
+                avantage:
+                  "Une anatomie que l'on manipule au lieu de l'imaginer : rotation, zoom, vues de face, de dos, de profil ou de trois quarts, recherche par nom et quiz, sur ordinateur comme sur mobile.",
+                image: "schemas-3d-corps-humain.png",
+                reverse: true,
               },
             ].map((tool, i) => (
               <div
@@ -297,28 +313,12 @@ export default function UniverselPage() {
                   }`}
                 >
                   <Image
-                    src={`/images/${
-                      tool.number === "1"
-                        ? "autre-outil"
-                        : tool.number === "2"
-                        ? "autre-outil-2"
-                        : tool.number === "3"
-                        ? "autre-outil-3"
-                        : tool.number === "4"
-                        ? "autre-outil-4"
-                        : tool.number === "5"
-                        ? "rencontres-juridiques"
-                        : "autre-outil"
-                    }.png`}
+                    src={`/images/${tool.image}`}
                     alt={tool.title}
                     width={800}
                     height={450}
                     className="autres-image w-full h-full object-contain"
-                    style={{
-                      filter:
-                        "drop-shadow(0 6px 12px rgba(200, 169, 107, 0.35)) drop-shadow(0 12px 24px rgba(200, 169, 107, 0.18))",
-                      borderRadius: "12px",
-                    }}
+                    style={{ borderRadius: "12px" }}
                   />
 
                   {tool.number === "1" && (
